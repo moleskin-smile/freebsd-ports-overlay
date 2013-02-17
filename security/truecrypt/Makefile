@@ -25,6 +25,7 @@ WRKSRC=		${WRKDIR}/truecrypt-${PORTVERSION}-source
 USE_FUSE=	yes
 USE_GMAKE=	yes
 USE_ICONV=	yes
+USE_PKGCONFIG=	build
 RESTRICTED=	Downloading requires acceptance of license agreement
 NO_CDROM=	Distribution requires acceptance of license agreement
 NO_PACKAGE=	Distribution requires acceptance of license agreement
