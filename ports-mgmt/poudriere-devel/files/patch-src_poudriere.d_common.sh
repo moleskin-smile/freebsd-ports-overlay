@@ -1,11 +1,11 @@
-diff -ruN src.orig/poudriere.d/common.sh src/poudriere.d/common.sh
---- src.orig/poudriere.d/common.sh	2013-01-13 18:11:32.000000000 +0000
-+++ src/poudriere.d/common.sh	2013-02-08 11:51:45.465681176 +0000
-@@ -333,7 +333,6 @@
- 	fi
+diff -rNu src.orig/share/poudriere/common.sh src/share/poudriere/common.sh
+--- src.orig/share/poudriere/common.sh  2013-03-17 21:03:10.000000000 +0100
++++ src/share/poudriere/common.sh       2013-03-19 15:53:30.307600202 +0100
+@@ -354,7 +354,6 @@
+        fi
  
- 	mount -t devfs devfs ${JAILMNT}/dev
--	mount -t fdescfs fdesc ${JAILMNT}/dev/fd
- 	mount -t procfs proc ${JAILMNT}/proc
+        mount -t devfs devfs ${JAILMNT}/dev
+-       mount -t fdescfs fdesc ${JAILMNT}/dev/fd
+        mount -t procfs proc ${JAILMNT}/proc
  
- 	if [ -z "${NOLINUX}" ]; then
+        if [ -z "${NOLINUX}" ]; then
