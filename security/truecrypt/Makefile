@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <rpsfa@rit.edu>
-# $FreeBSD: ports/security/truecrypt/Makefile,v 1.12 2012/12/14 15:53:06 svnexp Exp $
+# $FreeBSD: security/truecrypt/Makefile 313527 2013-03-06 16:52:02Z bapt $
 
 PORTNAME=	truecrypt
 PORTVERSION=	7.1a
@@ -22,7 +22,7 @@ RUN_DEPENDS=	sudo:${PORTSDIR}/security/sudo
 
 WRKSRC=		${WRKDIR}/truecrypt-${PORTVERSION}-source
 
-USE_FUSE=	yes
+USES=		fuse
 USE_GMAKE=	yes
 USE_ICONV=	yes
 USE_PKGCONFIG=	build
