@@ -28,8 +28,8 @@ PLIST_SUB=	SHLIB_MAJOR="${SHLIB_MAJOR}"
 
 .include <bsd.port.pre.mk>
 .if ${OSVERSION} > 900007
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-src-sigar.c \
-		${PATCHDIR}/extra-patch-configure.ac
+PATCH_WRKSRC=	${WRKDIR}/${DISTNAME}
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-src-sigar.c
 .endif
 
 do-install:
