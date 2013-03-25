@@ -18,8 +18,6 @@ DISTNAME=	${PORTNAME}
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	An iconv wrapper class for Ruby
 
-BUILD_DEPENDS=	${NONEXISTENT}:${PORTSDIR}/${RUBY_PORT}:patch
-
 USE_ICONV=	yes
 
 USE_RUBY=	yes
