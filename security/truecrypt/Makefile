@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <rpsfa@rit.edu>
-# $FreeBSD: security/truecrypt/Makefile 313527 2013-03-06 16:52:02Z bapt $
+# $FreeBSD: security/truecrypt/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	truecrypt
 PORTVERSION=	7.1a
@@ -22,10 +22,8 @@ RUN_DEPENDS=	sudo:${PORTSDIR}/security/sudo
 
 WRKSRC=		${WRKDIR}/truecrypt-${PORTVERSION}-source
 
-USES=		fuse
+USES=		fuse iconv
 USE_GMAKE=	yes
-USE_ICONV=	yes
-USE_PKGCONFIG=	build
 RESTRICTED=	Downloading requires acceptance of license agreement
 NO_CDROM=	Distribution requires acceptance of license agreement
 NO_PACKAGE=	Distribution requires acceptance of license agreement
