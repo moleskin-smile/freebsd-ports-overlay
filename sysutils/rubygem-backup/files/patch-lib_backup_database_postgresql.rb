@@ -33,7 +33,7 @@
  
 +      def pgdumpall
 +        "#{ password_options }" +
-+        "#{ pg_dumpall_utility } #{ username_option } " +
++        "#{ pg_dumpall_utility } #{ username_options } " +
 +        "#{ connectivity_options } #{ user_options }"
 +      end
 + 
