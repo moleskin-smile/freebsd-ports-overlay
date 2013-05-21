@@ -1,5 +1,5 @@
---- lib/backup/database/postgresql.rb	2013-05-21 18:06:27.191617000 +0200
-+++ lib/backup/database/postgresql.rb	2013-05-21 18:19:28.788617062 +0200
+--- lib/backup/database/postgresql.rb	2013-05-21 18:21:47.339616737 +0200
++++ lib/backup/database/postgresql.rb	2013-05-21 19:31:09.766827400 +0200
 @@ -31,6 +31,7 @@
        ##
        # Path to pg_dump utility (optional)
@@ -18,7 +18,7 @@
        end
  
        ##
-@@ -61,7 +64,7 @@
+@@ -61,14 +64,14 @@
          pipeline = Pipeline.new
          dump_ext = 'sql'
  
@@ -27,13 +27,21 @@
          if @model.compressor
            @model.compressor.compress_with do |command, ext|
              pipeline << command
+             dump_ext << ext
+           end
+         end
+-        pipeline << "cat > '#{ File.join(@dump_path, name) }.#{ dump_ext }'"
++        pipeline << "cat > '#{ File.join(@dump_path, name.to_s) }.#{ dump_ext }'"
+ 
+         pipeline.run
+         if pipeline.success?
 @@ -88,6 +91,12 @@
          "#{ user_options } #{ tables_to_dump } #{ tables_to_skip } #{ name }"
        end
  
 +      def pgdumpall
-+        "#{ password_options }" +
-+        "#{ pg_dumpall_utility } #{ username_options } " +
++        "#{ password_option }" +
++        "#{ pg_dumpall_utility } #{ username_option } " +
 +        "#{ connectivity_options } #{ user_options }"
 +      end
 + 
