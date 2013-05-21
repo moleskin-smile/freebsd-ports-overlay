@@ -2,7 +2,7 @@
 # $FreeBSD: ports/sysutils/rubygem-backup/Makefile,v 1.9 2012/12/04 13:03:23 svnexp Exp $
 
 PORTNAME=	backup
-PORTVERSION=	3.0.27
+PORTVERSION=	3.5.1
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
