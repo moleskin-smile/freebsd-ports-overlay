@@ -16,6 +16,7 @@ RUN_DEPENDS=	irssi:${PORTSDIR}/irc/irssi
 LIB_DEPENDS=	loudmouth:${PORTSDIR}/net-im/loudmouth
 
 USE_LDCONFIG=	yes
+USE_PKGCONFIG=	build
 
 PLIST_FILES=	lib/irssi/modules/libfe_xmpp.so \
 		lib/irssi/modules/libtext_xmpp.so \
