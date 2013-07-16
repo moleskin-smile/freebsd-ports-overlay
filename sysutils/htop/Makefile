@@ -41,6 +41,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's:/usr/bin/python:${PYTHON_CMD}:' ${WRKSRC}/scripts/MakeHeader.py
 
 pre-configure:
+.if !defined(PACKAGE_BUILDING)
 	@[ -f /compat/linux/proc/stat ] || { ${CAT} ${PKGMESSAGE}; ${FALSE}; }
+.endif
 
 .include <bsd.port.mk>
