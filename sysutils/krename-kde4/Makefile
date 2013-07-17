@@ -16,6 +16,7 @@ COMMENT=	Very powerful batch file renamer for KDE
 
 LIB_DEPENDS=	tag.1:${PORTSDIR}/audio/taglib \
 		exiv2.12:${PORTSDIR}/graphics/exiv2 \
+		freetype:${PORTSDIR}/print/freetype2 \
 		podofo.0:${PORTSDIR}/graphics/podofo
 
 LATEST_LINK=	${PORTNAME}-kde4
