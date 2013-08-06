@@ -10,7 +10,7 @@ MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	A systems integration framework. Expander
 
 RUN_DEPENDS=	rubygem-amqp=0.6.7:${PORTSDIR}/net/rubygem-amqp067 \
-		rubygem-bunny>=0.6.0:${PORTSDIR}/net/rubygem-bunny \
+		rubygem-bunny>=0.6.0:${PORTSDIR}/net/rubygem-bunny060 \
 		rubygem-em-http-request>=1.0.3:${PORTSDIR}/www/rubygem-em-http-request \
 		rubygem-eventmachine>=1.0.0:${PORTSDIR}/devel/rubygem-eventmachine \
 		rubygem-fast_xs>=0.7.3:${PORTSDIR}/textproc/rubygem-fast_xs073 \
