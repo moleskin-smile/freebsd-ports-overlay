@@ -16,10 +16,28 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_BZIP2=	yes
 USE_PHP=	ctype curl dom fileinfo filter gd hash iconv json mbstring \
-		mysql pdo pdo_mysql pdo_sqlite session simplexml sqlite3 xml \
-		wddx zip zlib
+		pdo session simplexml xml wddx zip zlib
 WANT_PHP_WEB=	yes
 DEFAULT_PHP_VER=5
+
+OPTIONS_MULTI=	DB
+OPTIONS_MULTI_DB=	MYSQL PGSQL SQLITE
+OPTIONS_DEFAULT=	MYSQL SQLITE
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MMYSQL}
+USE_PHP+=	pdo_mysql mysql
+.endif
+
+.if ${PORT_OPTIONS:MPGSQL}
+USE_PHP+=	pdo_pgsql pgsql
+.endif
+
+.if ${PORT_OPTIONS:MSQLITE}
+USE_PHP+=	pdo_sqlite sqlite3
+.endif
 
 WWWDOCROOT?=	www
 
