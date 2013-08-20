@@ -15,7 +15,7 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 		freetype:${PORTSDIR}/print/freetype2 \
 		dvdread:${PORTSDIR}/multimedia/libdvdread
 BUILD_DEPENDS=	ffmpeg1:${PORTSDIR}/multimedia/ffmpeg1 \
-		python3:${PORTSDIR}/lang/python33 \
+		python3:${PORTSDIR}/lang/python3 \
 		rst2man:${PORTSDIR}/textproc/py-docutils
 RUN_DEPENDS=	ffmpeg1:${PORTSDIR}/multimedia/ffmpeg1
 
