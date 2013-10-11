@@ -12,7 +12,6 @@ COMMENT=	OpenGL hardware acceleration drivers for the DRI
 LIB_DEPENDS=	libdrm.so:${PORTSDIR}/graphics/libdrm \
 		libexpat.so:${PORTSDIR}/textproc/expat2
 
-USES=		gettext pkgconfig
 USE_XORG=	glproto x11 xext xxf86vm xdamage xfixes dri2proto
 
 .include <bsd.port.options.mk>
@@ -43,6 +42,8 @@ ALL_DRI_DRIVERS+=I810 MACH64 MGA R128 R300 R600 SAVAGE SIS TDFX UNICHROME
 
 NO_STAGE=	yes
 .include "${.CURDIR}/../../graphics/libGL/bsd.mesalib.mk"
+
+USES+=		gettext
 
 PLIST_SUB+=	VERSION=${MESADISTVERSION}
 
