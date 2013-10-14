@@ -27,4 +27,5 @@ PLIST_FILES=	bin/chef-expander \
 		bin/chef-expander-vnode \
 		bin/chef-expanderctl
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
