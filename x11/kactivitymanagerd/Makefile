@@ -17,7 +17,8 @@ CONFLICTS_INSTALL=	kdelibs-4.7.* kde-runtime-4.7.* kactivities-4.[8-9].*
 USE_XZ=		yes
 USE_KDE4=	automoc4 kdehier kdelibs kdeprefix soprano nepomuk-core \
 		kactivities
-USES=		cmake:outsource compiler:c++11-lang
+USES=		cmake:outsource
+USE_GCC=	yes
 USE_QT4=	declarative opengl script sql \
 		moc_build qmake_build rcc_build uic_build
 USE_LDCONFIG=	yes
