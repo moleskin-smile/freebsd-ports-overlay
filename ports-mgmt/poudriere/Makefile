@@ -1,7 +1,7 @@
-# $FreeBSD: ports-mgmt/poudriere/Makefile 326628 2013-09-07 11:49:10Z bdrewery $
+# $FreeBSD: ports-mgmt/poudriere/Makefile 329959 2013-10-10 02:23:10Z bdrewery $
 
 PORTNAME=	poudriere
-PORTVERSION=	3.0.5
+PORTVERSION=	3.0.10
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://fossil.etoilebsd.net/poudriere/tarball/ \
 		LOCAL/bdrewery/${PORTNAME}/
@@ -13,15 +13,15 @@ COMMENT=	Port build and test system
 
 LICENSE=	BSD
 
-MANCOMPRESSED=	yes
-MAN8=	poudriere.8
-
 OPTIONS_DEFINE=	ZSH
 
 CONFLICTS_INSTALL=	poudriere-devel
 
+USES=		uidfix
+
 PLIST_FILES=	etc/poudriere.conf.sample \
 		bin/poudriere \
+		man/man8/poudriere.8.gz \
 		libexec/poudriere/dirwatch \
 		libexec/poudriere/dirempty \
 		libexec/poudriere/make_index \
@@ -62,8 +62,9 @@ PLIST_DIRSTRY+=	share/zsh/
 
 post-install:
 .if ${PORT_OPTIONS:MZSH}
-	@${MKDIR} ${PREFIX}/share/zsh/site-functions/
-	@${INSTALL_DATA} ${WRKSRC}/zsh-completions ${PREFIX}/share/zsh/site-functions/_poudriere
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/zsh/site-functions/
+	@${INSTALL_DATA} ${WRKSRC}/zsh-completions \
+	    ${STAGEDIR}${PREFIX}/share/zsh/site-functions/_poudriere
 .endif
 
 .include <bsd.port.mk>
