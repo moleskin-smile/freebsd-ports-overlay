@@ -1,8 +1,8 @@
-# $FreeBSD: multimedia/xbmc/Makefile 329777 2013-10-08 12:17:55Z madpilot $
+# $FreeBSD: multimedia/xbmc/Makefile 331589 2013-10-25 14:41:08Z uqs $
 
 PORTNAME=	xbmc
 DISTVERSION=	12.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://mirrors.xbmc.org/releases/source/
 
@@ -85,7 +85,7 @@ NONFREE_DESC=	Enable non-free components (rar, ccx, ffmpeg)
 SFTP_DESC=	SSH SFTP support via libssh
 VORBIS_DESC=	Ogg Vorbis audio encoder
 
-OPTIONS_DEFAULT=	AIRPLAY AVAHI CEC LAME LIBBLURAY HAL MYSQL \
+OPTIONS_DEFAULT=	AIRPLAY AVAHI CEC LIBBLURAY HAL MYSQL \
 			RTMP SFTP SMB VORBIS WEBSERVER
 
 .include <bsd.port.pre.mk>
