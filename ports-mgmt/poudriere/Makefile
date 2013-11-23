@@ -1,7 +1,7 @@
-# $FreeBSD: ports-mgmt/poudriere/Makefile 331915 2013-10-29 00:23:20Z bdrewery $
+# $FreeBSD: ports-mgmt/poudriere/Makefile 334365 2013-11-19 23:54:20Z bdrewery $
 
 PORTNAME=	poudriere
-PORTVERSION=	3.0.12
+PORTVERSION=	3.0.13
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://fossil.etoilebsd.net/poudriere/tarball/ \
 		LOCAL/bdrewery/${PORTNAME}/
@@ -22,6 +22,7 @@ USES=		uidfix
 PLIST_FILES=	etc/poudriere.conf.sample \
 		bin/poudriere \
 		man/man8/poudriere.8.gz \
+		libexec/poudriere/cpdup \
 		libexec/poudriere/dirwatch \
 		libexec/poudriere/dirempty \
 		libexec/poudriere/make_index \
