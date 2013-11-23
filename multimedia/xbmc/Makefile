@@ -1,8 +1,8 @@
-# $FreeBSD: multimedia/xbmc/Makefile 331589 2013-10-25 14:41:08Z uqs $
+# $FreeBSD: multimedia/xbmc/Makefile 334693 2013-11-23 18:41:39Z sunpoet $
 
 PORTNAME=	xbmc
 DISTVERSION=	12.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	http://mirrors.xbmc.org/releases/source/
 
