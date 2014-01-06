@@ -1,8 +1,8 @@
-# $FreeBSD: multimedia/xbmc/Makefile 334693 2013-11-23 18:41:39Z sunpoet $
+# $FreeBSD: multimedia/xbmc/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	xbmc
 DISTVERSION=	12.2
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	multimedia
 MASTER_SITES=	http://mirrors.xbmc.org/releases/source/
 
@@ -52,7 +52,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3 \
 		${PYTHON_PKGNAMEPREFIX}imaging>0:${PORTSDIR}/graphics/py-imaging \
 		xdpyinfo:${PORTSDIR}/x11/xdpyinfo
 
-FETCH_ARGS=	-Fpr
 USES=		gmake iconv pkgconfig
 USE_AUTOTOOLS=	autoconf libtool automake libltdl
 GNU_CONFIGURE=	yes
@@ -149,7 +148,7 @@ CONFIGURE_ARGS+=	--disable-libcec
 
 .if ${PORT_OPTIONS:MEXTERNAL_FFMPEG}
 CONFIGURE_ARGS+=	--enable-external-ffmpeg
-FFMPEG_SUFFIX=	1
+FFMPEG_SUFFIX=	0
 CONFIGURE_ENV+=	FFMPEG_SUFFIX="${FFMPEG_SUFFIX}"
 PLIST_SUB+=	EXTERNAL_FFMPEG="@comment "
 BUILD_DEPENDS+=	ffmpeg${FFMPEG_SUFFIX}>0.11:${PORTSDIR}/multimedia/ffmpeg${FFMPEG_SUFFIX}
