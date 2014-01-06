@@ -186,10 +186,8 @@ RUN_DEPENDS+=	lircd:${PORTSDIR}/comms/lirc
 .if ${PORT_OPTIONS:MMYSQL}
 CONFIGURE_ARGS+=	--enable-mysql
 USE_MYSQL=	yes
-PLIST_SUB+=	MYSQL=""
 .else
 CONFIGURE_ARGS+=	--disable-mysql
-PLIST_SUB+=	MYSQL="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MNONFREE}
