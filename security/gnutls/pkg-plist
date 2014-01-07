@@ -717,7 +717,7 @@ man/man3/gnutls_x509_rdn_get_oid.3.gz
 %%NLS%%share/locale/vi/LC_MESSAGES/libgnutls.mo
 %%NLS%%share/locale/zh_CN/LC_MESSAGES/libgnutls.mo
 @dirrm include/gnutls
-@dirrmtry share/locale/en@quot/LC_MESSAGES
-@dirrmtry share/locale/en@quot
-@dirrmtry share/locale/en@boldquot/LC_MESSAGES
-@dirrmtry share/locale/en@boldquot
+%%NLS%%@dirrmtry share/locale/en@quot/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/en@quot
+%%NLS%%@dirrmtry share/locale/en@boldquot/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/en@boldquot
