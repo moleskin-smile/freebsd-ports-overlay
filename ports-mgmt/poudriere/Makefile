@@ -1,17 +1,16 @@
-# $FreeBSD: ports-mgmt/poudriere/Makefile 334365 2013-11-19 23:54:20Z bdrewery $
+# $FreeBSD: head/ports-mgmt/poudriere/Makefile 340745 2014-01-22 23:05:13Z bdrewery $
 
 PORTNAME=	poudriere
-PORTVERSION=	3.0.13
+PORTVERSION=	3.0.14
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://fossil.etoilebsd.net/poudriere/tarball/ \
 		LOCAL/bdrewery/${PORTNAME}/
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}?uuid=${PORTVERSION}
 
-# Also maintained by bdrewery@FreeBSD.org
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	bdrewery@FreeBSD.org
 COMMENT=	Port build and test system
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 
 OPTIONS_DEFINE=	ZSH
 
