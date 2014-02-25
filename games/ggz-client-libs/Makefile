@@ -22,11 +22,7 @@ INSTALL_TARGET=	install-strip
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -pthread -lexpat
 
-OPTIONS_DEFINE=	NLS
-OPTIONS_SUB=	yes
-
-NLS_USES=	gettext
-NLS_CONFIGURE_ARGS=	--disable-nls
+USES+=		gettext
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|libggz.la|libggz.so|g' ${WRKSRC}/configure
