@@ -11,7 +11,7 @@ COMMENT=	Embeds vlc-player in web-browsers
 
 LIB_DEPENDS=	libvlc.so:${PORTSDIR}/multimedia/vlc
 
-USES=	webplugin:native
+USES=	pkgconfig webplugin:native
 USE_XZ=	yes
 WEBPLUGIN_NAME=	#
 WEBPLUGIN_FILES=libvlcplugin.so
