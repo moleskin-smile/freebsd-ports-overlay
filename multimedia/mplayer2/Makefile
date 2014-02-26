@@ -30,7 +30,6 @@ CONFIGURE_ARGS=	--cc=${CC} \
 		--extra-libs='-lavresample' \
 		--extra-ldflags='-L${LOCALBASE}/lib/portaudio2' \
 		--mandir=${PREFIX}/man \
-		--enable-libavresample \
 		--disable-alsa \
 		--disable-liba52 \
 		--disable-directfb \
