@@ -9,6 +9,7 @@ MASTER_SITES=	http://download.videolan.org/pub/videolan/vlc-webplugins/${PORTVER
 MAINTAINER=	mi@aldan.algber.com
 COMMENT=	Embeds vlc-player in web-browsers
 
+BUILD_DEPENDS=	svn:${PORTSDIR}/devel/subversion
 LIB_DEPENDS=	libvlc.so:${PORTSDIR}/multimedia/vlc
 
 USES=	pkgconfig webplugin:native
