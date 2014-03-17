@@ -18,10 +18,6 @@ LICENSE_NAME=	TeamSpeak 3.x End User License Agreement
 LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	no-dist-mirror no-dist-sell no-pkg-mirror no-pkg-sell
 
-.ifdef (BATCH)
-IGNORE=		license ${LICENSE} needs confirmation, but BATCH is defined
-.endif
-
 USES=		iconv
 NO_STAGE=	yes
 USE_LDCONFIG=	${PREFIX}/lib/teamspeak/server
