@@ -15,7 +15,7 @@ LICENSE=		LGPL3
 
 CONFLICTS=		samba33-3.*
 
-USES=			compiler gettext pkgconfig
+USES=			compiler pkgconfig
 USE_PYTHON_BUILD=	2
 USE_LDCONFIG=		yes
 WAF_TOOL=		buildtools/bin/waf
@@ -26,7 +26,8 @@ PLIST_SUB+=		PKGCONFIGDIR=${PKGCONFIGDIR:S;${PREFIX}/;;}
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX} \
 			--mandir=${MANPREFIX}/man \
-			--infodir=${PREFIX}/${INFO_PATH}/${INFO_SUBDIR}
+			--infodir=${PREFIX}/${INFO_PATH}/${INFO_SUBDIR} \
+			--without-gettext
 # Support staging
 DESTDIRNAME=		--destdir
 
