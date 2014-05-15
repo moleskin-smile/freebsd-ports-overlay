@@ -110,7 +110,7 @@ post-build:
 	(cd ${WRKSRC} && CC=${CC} CXX=${CXX} ${RAKE_BIN} nginx)
 .endif
 .if ${PORT_OPTIONS:MSYMLINK}
-	${LN} -s ${GEM_LIB_DIR} ${STAGE}${PREFIX}/${GEMS_DIR}/${PORTNAME}
+	${LN} -s ${PREFIX}/${GEM_LIB_DIR} ${STAGE}${PREFIX}/${GEMS_DIR}/${PORTNAME}
 .endif
 
 	${FIND} ${WRKSRC} -name '*.o' -delete
