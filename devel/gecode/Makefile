@@ -30,6 +30,7 @@ CONFIGURE_ARGS=	--disable-static \
 		--disable-examples \
 		--enable-minimodel \
 		--enable-search \
+		--with-architectures=i386,x86_64 \
 		--with-gmp-include=${LOCALBASE}/include \
 		--with-gmp-lib=${LOCALBASE}/lib \
 		--with-mpfr-include=${LOCALBASE}/include \
