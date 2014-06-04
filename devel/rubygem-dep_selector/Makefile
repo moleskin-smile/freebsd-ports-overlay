@@ -16,6 +16,9 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+# dirty hack
+CFLAGS+=		-D__USE_ISOC99
+CXXFLAGS+=		-D__USE_ISOC99
 CONFIGURE_ARGS+=	--with-opt-dir=${LOCALBASE}
 
 .include <bsd.port.mk>
