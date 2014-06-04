@@ -21,10 +21,6 @@ LICENSE_PERMS=	no-dist-mirror no-dist-sell no-pkg-mirror no-pkg-sell
 
 LIB_DEPENDS=	libiconv.so.3:${PORTSDIR}/converters/libiconv
 
-.ifdef (BATCH)
-IGNORE=		license ${LICENSE} needs confirmation, but BATCH is defined
-.endif
-
 NO_BUILD=	yes
 USE_LDCONFIG=	${LIBDIR}
 USE_RC_SUBR=	teamspeak
