@@ -16,4 +16,10 @@ USE_RUBYGEMS=	yes
 GEM_NAME=	${PORTNAME}-ruby-${PORTVERSION}
 RUBYGEM_AUTOPLIST=	yes
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${RUBY_VER} != 1.9
+EXTRA_PATCHES=	${PATCHDIR}/extra-patch-bzip2.c
+.endif
+
+.include <bsd.port.post.mk>
