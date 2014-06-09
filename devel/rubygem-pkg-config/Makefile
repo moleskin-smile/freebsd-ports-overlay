@@ -14,4 +14,10 @@ USE_RUBYGEMS=	yes
 USE_RAKE=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${RUBY_VER} != 1.9
+EXTRA_PATCHES=	${PATCHDIR}/extra-patch-lib-pkg-config.rb
+.endif
+
+.include <bsd.port.post.mk>
