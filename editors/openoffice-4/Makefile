@@ -104,6 +104,7 @@ CONFIGURE_ENV+=	CC="${OOOCC}" CXX="${OOOCXX}"		\
 		CPPFLAGS="-I${LOCALBASE}/include" LDFLAGS="-L${LOCALBASE}/lib"
 
 LIB_DEPENDS=	libcairo.so:${PORTSDIR}/graphics/cairo \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libexpat.so:${PORTSDIR}/textproc/expat2 \
 		libjpeg.so:${PORTSDIR}/graphics/jpeg \
 		libcurl.so:${PORTSDIR}/ftp/curl \
