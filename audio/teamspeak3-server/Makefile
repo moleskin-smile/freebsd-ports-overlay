@@ -1,9 +1,9 @@
 # Created by: Daniel O'Connor
-# $FreeBSD: head/audio/teamspeak3-server/Makefile 356438 2014-06-04 06:36:54Z miwi $
+# $FreeBSD: head/audio/teamspeak3-server/Makefile 367888 2014-09-10 20:50:31Z gerald $
 
 PORTNAME=	teamspeak3-server
 PORTVERSION=	3.0.10.3
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	audio net
 MASTER_SITES=	http://dl.4players.de/ts/releases/${PORTVERSION}/ \
@@ -43,6 +43,8 @@ PLIST_SUB+=	DBDIR=${DBDIR} \
 SUB_LIST+=	DBDIR=${DBDIR} \
 		ETCDIR=${ETCDIR} \
 		LOGDIR=${LOGDIR}
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
