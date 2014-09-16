@@ -1,7 +1,8 @@
-# $FreeBSD: head/devel/ruby-krossruby/Makefile 349983 2014-04-03 09:49:10Z makc $
+# $FreeBSD: head/devel/ruby-krossruby/Makefile 367888 2014-09-10 20:50:31Z gerald $
 
 PORTNAME=	krossruby
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	2
 CATEGORIES=	devel kde ruby
 MASTER_SITES=	KDE/${KDE4_BRANCH}/${PORTVERSION}/src
 PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
