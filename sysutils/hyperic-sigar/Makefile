@@ -23,7 +23,6 @@ USE_LDCONFIG=	yes
 SHLIB_MAJOR=	0
 PLIST_SUB=	SHLIB_MAJOR="${SHLIB_MAJOR}"
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .if ${OSVERSION} > 900007
 PATCH_WRKSRC=	${WRKDIR}/${DISTNAME}
@@ -31,10 +30,10 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-src-sigar.c
 .endif
 
 do-install:
-	${MKDIR} ${PREFIX}/include ${PREFIX}/lib ${JAVAJARDIR}
-	${INSTALL_DATA} ${WRKSRC}/sigar-bin/include/*.h ${PREFIX}/include/
-	${INSTALL_DATA} ${WRKSRC}/sigar-bin/lib/libsigar-*.so ${PREFIX}/lib/libsigar.so.${SHLIB_MAJOR}
-	${LN} -sf ${PREFIX}/lib/libsigar.so.${SHLIB_MAJOR} ${PREFIX}/lib/libsigar.so
-	${INSTALL_DATA} ${WRKSRC}/sigar-bin/lib/sigar.jar ${JAVAJARDIR}/
+	${MKDIR} ${STAGEDIR}${PREFIX}/include ${STAGEDIR}${PREFIX}/lib ${STAGEDIR}${JAVAJARDIR}
+	${INSTALL_DATA} ${WRKSRC}/sigar-bin/include/*.h ${STAGEDIR}${PREFIX}/include/
+	${INSTALL_DATA} ${WRKSRC}/sigar-bin/lib/libsigar-*.so ${STAGEDIR}${PREFIX}/lib/libsigar.so.${SHLIB_MAJOR}
+	${LN} -sf ${PREFIX}/lib/libsigar.so.${SHLIB_MAJOR} ${STAGEDIR}${PREFIX}/lib/libsigar.so
+	${INSTALL_DATA} ${WRKSRC}/sigar-bin/lib/sigar.jar ${STAGEDIR}${JAVAJARDIR}/
 
 .include <bsd.port.post.mk>
