@@ -1,7 +1,7 @@
-# $FreeBSD: head/ports-mgmt/poudriere/Makefile 368336 2014-09-16 17:07:11Z bdrewery $
+# $FreeBSD: head/ports-mgmt/poudriere/Makefile 368387 2014-09-17 15:51:37Z bdrewery $
 
 PORTNAME=	poudriere
-PORTVERSION=	3.0.18
+PORTVERSION=	3.0.19
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://fossil.etoilebsd.net/poudriere/tarball/ \
 		LOCAL/bdrewery/${PORTNAME}/
