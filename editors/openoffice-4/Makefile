@@ -46,6 +46,7 @@ LIB_DEPENDS=								\
 		libapr-1.so:${PORTSDIR}/devel/apr1			\
 		libcurl.so:${PORTSDIR}/ftp/curl				\
 		libcairo.so:${PORTSDIR}/graphics/cairo			\
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib		\
 		libjpeg.so:${PORTSDIR}/graphics/jpeg			\
 		libpng.so:${PORTSDIR}/graphics/png			\
 		libpoppler-glib.so:${PORTSDIR}/graphics/poppler-glib	\
