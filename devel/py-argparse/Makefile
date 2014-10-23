@@ -15,5 +15,6 @@ LICENSE=	PSFL
 
 USES=		python
 USE_PYTHON=	distutils autoplist
+PYDISTUTILS_INSTALLNOSINGLE=	yes
 
 .include <bsd.port.mk>
