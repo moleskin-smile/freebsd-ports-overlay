@@ -18,6 +18,7 @@ GH_COMMIT=	f41fc2b
 GH_TAGNAME=	${GH_COMMIT}
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/bs4/__init__.py:${PORTSDIR}/www/py-beautifulsoup \
+		${PYTHON_PKGNAMEPREFIX}argparse>0:${PORTSDIR}/devel/py-argparse \
 		${PYTHON_PKGNAMEPREFIX}enzyme>=0.4.0:${PORTSDIR}/multimedia/py-enzyme \
 		${PYTHON_PKGNAMEPREFIX}guessit>=0.6.2:${PORTSDIR}/multimedia/py-guessit \
 		${PYTHON_PKGNAMEPREFIX}requests>=2.0.1:${PORTSDIR}/www/py-requests \
