@@ -32,5 +32,6 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/bs4/__init__.py:${PORTSDIR}/www/py-beautifulso
 
 USES=		python:2
 USE_PYTHON=	distutils autoplist
+PYDISTUTILS_INSTALLNOSINGLE=   yes
 
 .include <bsd.port.mk>
