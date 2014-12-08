@@ -14,7 +14,7 @@ COMMENT=	Web based test management and test execution system
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USE_PHP=	gd iconv mbstring session xml
+USE_PHP=	gd iconv mbstring openssl session simplexml xml
 WANT_PHP_WEB=	yes
 NO_BUILD=	yes
 PLIST_SUB=	WWWOWN=${WWWOWN} WWWGRP=${WWWGRP}
