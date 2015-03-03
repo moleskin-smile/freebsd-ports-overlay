@@ -56,6 +56,7 @@ do-install:
 	cd ${WRKSRC}/ && ${INSTALL_PROGRAM} ${CANNED_MANPAGES:R} ${STAGEDIR}${PREFIX}/bin/
 	cd ${WRKSRC}/ && ${INSTALL_SCRIPT} ${PERL_MANPAGES:R} ${STAGEDIR}${PREFIX}/bin/
 	cd ${WRKSRC}/ && ${INSTALL_MAN} ${CANNED_MANPAGES} ${PERL_MANPAGES} ${STAGEDIR}${PREFIX}/man/man1/
+	@${MV} ${STAGEDIR}${PREFIX}/man/man1/ts.1 ${STAGEDIR}${PREFIX}/man/man1/moreutils-ts.1
 
 # maintainer section:
 # require: docbook-xsl, libxml2, libxslt
