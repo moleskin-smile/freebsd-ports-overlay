@@ -1,8 +1,9 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: head/graphics/icat/Makefile 375663 2014-12-27 00:09:02Z gblach $
+# $FreeBSD: head/graphics/icat/Makefile 385633 2015-05-07 15:17:32Z mat $
 
 PORTNAME=	icat
 PORTVERSION=	0.4
+DISTVERSIONPREFIX=	v
 PORTREVISION=	1
 CATEGORIES=	graphics
 
@@ -14,13 +15,9 @@ LIB_DEPENDS=	libImlib2.so:${PORTSDIR}/graphics/imlib2
 USES=		gmake dos2unix
 USE_GITHUB=	yes
 GH_ACCOUNT=	atextor
-GH_TAGNAME=	v${PORTVERSION}
-GH_COMMIT=	e8bee81
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-
-WRKSRC=		${WRKDIR}/${GH_ACCOUNT}-${PORTNAME}-${GH_COMMIT}
 
 PLIST_FILES=	bin/icat
 
