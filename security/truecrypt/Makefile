@@ -60,9 +60,7 @@ License Agreement.\n\
 Select the Mac OS X / Linux (.tar.gz) version\n\n\
 Place the downloaded file into ${DISTDIR} and rename it to ${TC_SRCFILE}\n\n\
 Then, please restart the build.\n\n
-.endif
 
-.if defined(DISTFILE_INSTRUCTIONS)
 .if defined(PACKAGE_BUILDING)
 IGNORE=		requires manual fetch
 .else
