@@ -1,11 +1,10 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: head/www/testlink/Makefile 379424 2015-02-20 13:23:58Z tota $
+# $FreeBSD: head/www/testlink/Makefile 386783 2015-05-19 14:51:31Z amdmi3 $
 
 PORTNAME=	testlink
 PORTVERSION=	1.9.13
 CATEGORIES=	www devel
-MASTER_SITES=	SF
-MASTER_SITE_SUBDIR=	${PORTNAME}/TestLink%201.9/TestLink%20${PORTVERSION}
+MASTER_SITES=	SF/${PORTNAME}/TestLink%201.9/TestLink%20${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Web based test management and test execution system
@@ -13,6 +12,8 @@ COMMENT=	Web based test management and test execution system
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+USES=		cpe
+CPE_VENDOR=	teamst
 USE_PHP=	gd iconv mbstring openssl session simplexml xml
 WANT_PHP_WEB=	yes
 NO_BUILD=	yes
