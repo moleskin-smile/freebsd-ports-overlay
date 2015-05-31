@@ -1,11 +1,11 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: head/devel/py-argparse/Makefile 371280 2014-10-20 16:04:12Z mva $
+# $FreeBSD: head/devel/py-argparse/Makefile 386312 2015-05-14 10:15:04Z mat $
 
 PORTNAME=	argparse
 PORTVERSION=	1.2.1
 PORTREVISION=	1
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
+MASTER_SITES=	GOOGLE_CODE
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	lwhsu@FreeBSD.org
