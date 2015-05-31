@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: head/devel/rubygem-pkg-config/Makefile 372645 2014-11-16 19:09:17Z swills $
+# $FreeBSD: head/devel/rubygem-pkg-config/Makefile 373236 2014-11-24 18:24:47Z sunpoet $
 
 PORTNAME=	pkg-config
 PORTVERSION=	1.1.6
@@ -8,6 +8,9 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	pkg-config implementation for Ruby
+
+LICENSE=	LGPL21 LGPL3
+LICENSE_COMB=	dual
 
 USES=		pkgconfig
 USE_RUBY=	yes
