@@ -102,6 +102,8 @@ CONFIGURE_ARGS+=--disable-pinentry-curses
 .if ${PINENTRY_GUI} == "tty"
 PLIST_FILES=	bin/pinentry-tty
 CONFIGURE_ARGS+=--enable-pinentry-tty
+# I'm not sure whether it should be only for tty
+LIB_DEPENDS+=	libassuan.so:${PORTSDIR}/security/libassuan
 .else
 CONFIGURE_ARGS+=--disable-pinentry-tty
 .endif
