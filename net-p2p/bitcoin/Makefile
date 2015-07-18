@@ -1,8 +1,8 @@
 # Created by: Shaun Amott <shaun@FreeBSD.org>
-# $FreeBSD: head/net-p2p/bitcoin/Makefile 391383 2015-07-06 03:09:35Z feld $
+# $FreeBSD: head/net-p2p/bitcoin/Makefile 392307 2015-07-16 18:35:16Z pgollucci $
 
 PORTNAME=	bitcoin
-PORTVERSION=	0.10.2
+PORTVERSION=	0.11.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net-p2p finance
 
@@ -77,7 +77,7 @@ WANT_BDB_VER=	48
 
 GH_ACCOUNT=	bitcoin
 
-CONFIGURE_ARGS?= --without-libs \
+CONFIGURE_ARGS?=	--without-libs \
 			--disable-reduce-exports \
 			--with-gui \
 			--without-daemon \
