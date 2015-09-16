@@ -71,7 +71,13 @@ QRCODES_LIB_DEPENDS=	libqrencode.so:${PORTSDIR}/graphics/libqrencode
 WALLET_CONFIGURE_ENABLE=	wallet
 WALLET_CXXFLAGS=		-I${BDB_INCLUDE_DIR}
 WALLET_LIBS=			-L${BDB_LIB_DIR}
-WALLET_USE=			BDB=48
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MWALLET}
+USE_BDB=       yes
+WANT_BDB_VER=  48
+.endif
 
 GH_ACCOUNT=	litecoin-project
 
