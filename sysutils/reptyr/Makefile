@@ -24,7 +24,7 @@ ONLY_FOR_ARCHS=	i386 amd64
 
 .include <bsd.port.pre.mk>
 .if ${PORT_OPTIONS:MBASH}
-BUILD_DEPENDS=	${LOCALBASE}/share/bash-completion/bash_completion:${PORTSDIR}/shells/bash-completion
+BUILD_DEPENDS+=	${LOCALBASE}/share/bash-completion/bash_completion:${PORTSDIR}/shells/bash-completion
 .endif
 
 BROKEN_FreeBSD_8=	Not supported on FreeBSD older than 10.0
