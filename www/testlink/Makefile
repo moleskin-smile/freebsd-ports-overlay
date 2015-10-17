@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: head/www/testlink/Makefile 386783 2015-05-19 14:51:31Z amdmi3 $
+# $FreeBSD: head/www/testlink/Makefile 399291 2015-10-14 19:29:05Z tota $
 
 PORTNAME=	testlink
-PORTVERSION=	1.9.13
+PORTVERSION=	1.9.14
 CATEGORIES=	www devel
 MASTER_SITES=	SF/${PORTNAME}/TestLink%201.9/TestLink%20${PORTVERSION}
 
