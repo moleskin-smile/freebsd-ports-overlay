@@ -11,7 +11,6 @@ COMMENT=	Trace a chain of DNS servers to the source
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
-USES=		gmake
 
 PLIST_FILES=	bin/dnstracer \
 		man/man8/dnstracer.8.gz
