@@ -1,0 +1,4 @@
+%%GO_LIBDIR%%/github.com/mattn/go-colorable.a
+%%GO_SRCDIR%%/%%GO_PKGNAME%%/README.md
+%%GO_SRCDIR%%/%%GO_PKGNAME%%/colorable_others.go
+%%GO_SRCDIR%%/%%GO_PKGNAME%%/colorable_windows.go
