@@ -2,7 +2,7 @@
 # $FreeBSD: head/devel/git/Makefile 409430 2016-02-23 15:55:35Z rakuco $
 
 PORTNAME=	git
-DISTVERSION=	2.7.3
+DISTVERSION=	2.7.4
 PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	KERNEL_ORG/software/scm/git
