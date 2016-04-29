@@ -13,6 +13,7 @@ LICENSE=	MIT
 
 BUILD_DEPENDS=	${LOCALBASE}/${GO_LIBDIR}/github.com/mattn/go-isatty.a:${PORTSDIR}/devel/go-isatty
 
+USES=		go
 USE_GITHUB=	yes
 GH_ACCOUNT=	mattn
 GH_PROJECT=	${PKGNAMEPREFIX}${PORTNAME}
@@ -20,6 +21,4 @@ GH_TAGNAME=	9cbef7c
 
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/${GH_PROJECT}
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/lang/go/files/bsd.go.mk"
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

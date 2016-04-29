@@ -14,6 +14,7 @@ BUILD_DEPENDS=	${LOCALBASE}/${GO_LIBDIR}/github.com/mattn/go-colorable.a:${PORTS
 		${LOCALBASE}/${GO_LIBDIR}/github.com/mattn/go-runewidth.a:${PORTSDIR}/devel/go-runewidth
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
+USES=		go
 USE_GITHUB=	yes
 GH_ACCOUNT=	schachmat
 
@@ -21,6 +22,4 @@ GO_PKGNAME=	github.com/${GH_ACCOUNT}/${PORTNAME}
 
 PLIST_FILES=    bin/wego
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/lang/go/files/bsd.go.mk"
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

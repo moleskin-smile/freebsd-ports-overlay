@@ -11,6 +11,7 @@ COMMENT=	isatty for golang
 
 LICENSE=	MIT
 
+USES=		go
 USE_GITHUB=	yes
 GH_ACCOUNT=	mattn
 GH_PROJECT=	${PKGNAMEPREFIX}${PORTNAME}
@@ -18,6 +19,4 @@ GH_TAGNAME=	56b76bd
 
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/${GH_PROJECT}
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/lang/go/files/bsd.go.mk"
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
