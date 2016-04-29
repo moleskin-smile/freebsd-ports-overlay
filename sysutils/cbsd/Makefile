@@ -1,7 +1,7 @@
-# $FreeBSD: head/sysutils/cbsd/Makefile 412511 2016-04-04 12:57:19Z vg $
+# $FreeBSD: head/sysutils/cbsd/Makefile 413970 2016-04-25 08:31:53Z vg $
 
 PORTNAME=	cbsd
-PORTVERSION=	10.3.1
+PORTVERSION=	10.3.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils
 
