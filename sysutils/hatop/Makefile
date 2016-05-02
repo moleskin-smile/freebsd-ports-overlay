@@ -11,7 +11,8 @@ COMMENT=	Interactive real-time monitoring tool for the HAProxy unix socket
 
 RUN_DEPENDS=	${LOCALBASE}/sbin/haproxy:net/haproxy
 
-USES=		python
+USES=		python shebangfix
+SHEBANG_FILES=	bin/hatop
 NO_BUILD=	yes
 
 LICENSE=	GPLv3
