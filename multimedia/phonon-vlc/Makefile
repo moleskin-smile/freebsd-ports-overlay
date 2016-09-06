@@ -1,10 +1,9 @@
-# $FreeBSD: head/multimedia/phonon-vlc/Makefile 415864 2016-05-25 20:56:06Z rene $
+# $FreeBSD: head/multimedia/phonon-vlc/Makefile 421340 2016-09-04 14:30:13Z rakuco $
 
 PORTNAME=	phonon
-PORTVERSION=	0.8.2
-PORTREVISION=	1
+PORTVERSION=	0.9.0
 CATEGORIES=	multimedia kde
-MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTNAME}-backend${PKGNAMESUFFIX}/${PORTVERSION}/src
+MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTNAME}-backend${PKGNAMESUFFIX}/${PORTVERSION}
 PKGNAMESUFFIX=	-vlc
 DISTNAME=	${PORTNAME}-backend${PKGNAMESUFFIX}-${PORTVERSION}
 DIST_SUBDIR=	KDE
@@ -14,10 +13,12 @@ COMMENT=	VLC backend for Phonon
 
 LIB_DEPENDS=	libvlc.so:multimedia/vlc
 
-USE_KDE4=	automoc4
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-backend//}
+
+USES=		cmake kde:4 pkgconfig tar:xz
+USE_KDE=	automoc4
 USE_QT4=	corelib gui phonon \
 		qmake_build moc_build rcc_build uic_build
-USES=		cmake pkgconfig tar:xz
 
 post-install:
 	${MKDIR} ${STAGEDIR}${QT_PLUGINDIR}/phonon_backend
