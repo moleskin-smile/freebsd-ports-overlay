@@ -1,0 +1,4 @@
+ingo is a simple Go library helping you to persist flags in a ini-like
+config file.
+
+WWW: https://github.com/schachmat/ingo
