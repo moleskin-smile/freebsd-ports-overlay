@@ -11,7 +11,7 @@ COMMENT=	Go wrapper library to get proper colours on Windows
 
 LICENSE=	MIT
 
-BUILD_DEPENDS=	${LOCALBASE}/${GO_LIBDIR}/github.com/mattn/go-isatty.a:${PORTSDIR}/devel/go-isatty
+BUILD_DEPENDS=	${LOCALBASE}/${GO_LIBDIR}/github.com/mattn/go-isatty.a:devel/go-isatty
 
 USES=		go
 USE_GITHUB=	yes
