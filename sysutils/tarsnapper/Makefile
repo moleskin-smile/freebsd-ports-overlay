@@ -18,9 +18,9 @@ GH_ACCOUNT=		miracle2k
 USES=			python
 USE_PYTHON=		autoplist distutils
 
-RUN_DEPENDS+=	tarsnap:${PORTSDIR}/sysutils/tarsnap					\
-		${PYTHON_PKGNAMEPREFIX}argparse>=1.1:${PORTSDIR}/devel/py-argparse	\
-		${PYTHON_PKGNAMEPREFIX}dateutil>=2.3:${PORTSDIR}/devel/py-dateutil	\
-		${PYTHON_PKGNAMEPREFIX}yaml>=3:${PORTSDIR}/devel/py-yaml
+RUN_DEPENDS+=	tarsnap:sysutils/tarsnap				\
+		${PYTHON_PKGNAMEPREFIX}argparse>=1.1:devel/py-argparse	\
+		${PYTHON_PKGNAMEPREFIX}dateutil>=2.3:devel/py-dateutil	\
+		${PYTHON_PKGNAMEPREFIX}yaml>=3:devel/py-yaml
 
 .include <bsd.port.mk>
