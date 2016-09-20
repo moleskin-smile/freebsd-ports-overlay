@@ -16,6 +16,6 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	schachmat
 GH_TAGNAME=	b1887f8
 
-GO_PKGNAME=	github.com/${GH_ACCOUNT}/${GH_PROJECT}
+GO_PKGNAME=	github.com/${GH_ACCOUNT}/${PORTNAME}
 
 .include <bsd.port.mk>
