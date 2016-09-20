@@ -9,7 +9,7 @@ PKGNAMEPREFIX=	go-
 MAINTAINER=	am+bsd@nereis.pl
 COMMENT=	Go library helping you to persist flags in a ini-like config file
 
-LICENSE=	ISC
+LICENSE=	ISCL
 
 USES=		go
 USE_GITHUB=	yes
