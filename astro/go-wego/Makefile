@@ -11,7 +11,7 @@ COMMENT=	Weather app for the terminal
 LICENSE=	ISCL
 
 BUILD_DEPENDS=	${LOCALBASE}/${GO_LIBDIR}/github.com/mattn/go-colorable.a:${PORTSDIR}/devel/go-colorable \
-		${LOCALBASE}/${GO_LIBDIR}/github.com/schachmat/go-ingo.a:${PORTSDIR}/devel/go-ingo \
+		${LOCALBASE}/${GO_LIBDIR}/github.com/schachmat/ingo.a:${PORTSDIR}/devel/go-ingo \
 		${LOCALBASE}/${GO_LIBDIR}/github.com/mattn/go-runewidth.a:${PORTSDIR}/devel/go-runewidth
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
