@@ -1,7 +1,7 @@
-# $FreeBSD: head/sysutils/cbsd/Makefile 420052 2016-08-11 06:59:18Z vg $
+# $FreeBSD: head/sysutils/cbsd/Makefile 422736 2016-09-24 18:03:43Z novel $
 
 PORTNAME=	cbsd
-PORTVERSION=	10.3.3
+PORTVERSION=	11.0.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	olevole@olevole.ru
@@ -33,10 +33,6 @@ GROUPS=	${PORTNAME}
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} < 1000000
 IGNORE=	does not support FreeBSD versions < 10.0
-.endif
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100000
-LIB_DEPENDS+=	libxo.so:devel/libxo
 .endif
 
 do-install:
