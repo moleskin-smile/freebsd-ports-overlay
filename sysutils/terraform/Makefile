@@ -30,11 +30,11 @@ PLUGINS=	provider-atlas provider-aws provider-azure provider-azurerm \
 post-extract:
 	@${MV} ${WRKSRC}/vendor ${WRKSRC}/src
 	@${MKDIR} ${WRKSRC}/src/github.com/${GH_ACCOUNT}/${PORTNAME}
-.for src in .gitignore .travis.yml BUILDING.md CHANGELOG.md LICENSE Makefile \
-	README.md Vagrantfile builtin checkpoint.go command commands.go communicator \
-	config config.go config_test.go config_unix.go config_windows.go contrib dag \
-	deps digraph dot examples flatmap helper main.go panic.go plugin scripts \
-	state terraform test-fixtures version.go website
+.for src in .github .gitignore .travis.yml BUILDING.md CHANGELOG.md LICENSE
+	Makefile README.md Vagrantfile builtin checkpoint.go command commands.go \
+	communicator config config.go config_test.go config_unix.go config_windows.go \
+	contrib dag deps digraph dot examples flatmap help.go helper main.go panic.go \
+	plugin scripts state terraform test-fixtures version.go website
 	@${MV} ${WRKSRC}/${src} \
 		${WRKSRC}/src/github.com/hashicorp/${PORTNAME}
 .endfor
