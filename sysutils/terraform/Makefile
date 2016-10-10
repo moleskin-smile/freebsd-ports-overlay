@@ -30,7 +30,7 @@ PLUGINS=	provider-atlas provider-aws provider-azure provider-azurerm \
 post-extract:
 	@${MV} ${WRKSRC}/vendor ${WRKSRC}/src
 	@${MKDIR} ${WRKSRC}/src/github.com/${GH_ACCOUNT}/${PORTNAME}
-.for src in .github .gitignore .travis.yml BUILDING.md CHANGELOG.md LICENSE
+.for src in .github .gitignore .travis.yml BUILDING.md CHANGELOG.md LICENSE \
 	Makefile README.md Vagrantfile builtin checkpoint.go command commands.go \
 	communicator config config.go config_test.go config_unix.go config_windows.go \
 	contrib dag deps digraph dot examples flatmap help.go helper main.go panic.go \
