@@ -17,7 +17,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	s3erios
 
 USES=		linux
-USE_LINUX=	devtools
+USE_LINUX+=	devtools:build
 USE_LINUX_PREFIX=	yes
 # do not define USE_LDCONFIG, it's not for global use
 
