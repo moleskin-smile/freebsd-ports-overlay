@@ -19,7 +19,6 @@ USES=			python
 USE_PYTHON=		autoplist distutils
 
 RUN_DEPENDS+=	tarsnap:sysutils/tarsnap				\
-		${PYTHON_PKGNAMEPREFIX}argparse>=1.1:devel/py-argparse	\
 		${PYTHON_PKGNAMEPREFIX}dateutil>=2.3:devel/py-dateutil	\
 		${PYTHON_PKGNAMEPREFIX}yaml>=3:devel/py-yaml
 
