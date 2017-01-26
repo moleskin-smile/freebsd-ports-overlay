@@ -1,8 +1,7 @@
-# $FreeBSD: head/sysutils/cbsd/Makefile 427433 2016-11-30 16:03:57Z novel $
+# $FreeBSD: head/sysutils/cbsd/Makefile 432353 2017-01-24 16:11:00Z novel $
 
 PORTNAME=	cbsd
-PORTVERSION=	11.0.6
-PORTREVISION=	1
+PORTVERSION=	11.0.7
 CATEGORIES=	sysutils
 
 MAINTAINER=	olevole@olevole.ru
@@ -27,14 +26,8 @@ PLIST_FILES+=	man/man8/cbsd.8.gz
 
 CBSD_HOME?=	${PREFIX}/cbsd
 
-.include <bsd.port.pre.mk>
-
 USERS=	${PORTNAME}
 GROUPS=	${PORTNAME}
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1000000
-IGNORE=	does not support FreeBSD versions < 10.0
-.endif
 
 do-install:
 	@${ECHO} "Installing in ${CBSD_HOME}"
@@ -50,4 +43,4 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/libexec/bsdconfig
 	@${LN} -sf ${CBSD_HOME}/share/bsdconfig/cbsd ${STAGEDIR}${PREFIX}/libexec/bsdconfig/cbsd
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
