@@ -1,7 +1,8 @@
-# $FreeBSD: head/multimedia/phonon-vlc/Makefile 435949 2017-03-11 16:40:32Z rakuco $
+# $FreeBSD: head/multimedia/phonon-vlc/Makefile 439367 2017-04-25 08:20:30Z riggs $
 
 PORTNAME=	phonon
 PORTVERSION=	0.9.1
+PORTREVISION=	1
 CATEGORIES=	multimedia kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTNAME}-backend${PKGNAMESUFFIX}/${PORTVERSION}
 PKGNAMESUFFIX=	-vlc
