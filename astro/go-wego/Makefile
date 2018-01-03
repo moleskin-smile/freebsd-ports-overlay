@@ -10,14 +10,16 @@ COMMENT=	Weather app for the terminal
 
 LICENSE=	ISCL
 
-BUILD_DEPENDS=	${LOCALBASE}/${GO_LIBDIR}/github.com/mattn/go-colorable.a:devel/go-colorable \
-		${LOCALBASE}/${GO_LIBDIR}/github.com/schachmat/ingo.a:devel/go-ingo \
-		${LOCALBASE}/${GO_LIBDIR}/github.com/mattn/go-runewidth.a:devel/go-runewidth
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
 
 USES=		go
 USE_GITHUB=	yes
 GH_ACCOUNT=	schachmat
+
+GH_TUPLE=	mattn:go-colorable:v0.0.9:colorable/../src/github.com/mattn/go-colorable \
+		mattn:go-isatty:v0.0.3:isatty/../src/github.com/mattn/go-isatty \
+		mattn:go-runewidth:v0.0.2:runewidth/../src/github.com/mattn/go-runewidth \
+		schachmat:ingo:a4bdc07:ingo/../src/github.com/schachmat/ingo
 
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/${PORTNAME}
 
