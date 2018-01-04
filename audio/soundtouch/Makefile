@@ -29,6 +29,7 @@ OPTIONS_DEFAULT_i386=	${MACHINE_CPU:tu:MSSE}
 INTEGER_SAMPLES_DESC=	Use integer sample format
 INTEGER_SAMPLES_CONFIGURE_ENABLE=	integer-samples
 OPENMP_CONFIGURE_ENABLE=openmp
+OPENMP_USE=		CXXSTD=gnu++11
 OPENMP_USES=		compiler:gcc-c++11-lib
 SSE_CONFIGURE_ENABLE=	x86-optimizations
 SSE_USES=		compiler:c++11-lang
