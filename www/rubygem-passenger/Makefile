@@ -2,8 +2,7 @@
 # $FreeBSD: head/www/rubygem-passenger/Makefile 464208 2018-03-11 21:00:35Z antoine $
 
 PORTNAME=	passenger
-PORTVERSION=	5.1.12
-PORTREVISION=	2
+PORTVERSION=	5.2.1
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 PKGNAMEPREFIX=	rubygem-
