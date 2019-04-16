@@ -2,15 +2,17 @@
 # $FreeBSD: head/security/oidentd/Makefile 383107 2015-04-03 11:26:48Z mat $
 
 PORTNAME=	oidentd
-PORTVERSION=	2.0.8
+PORTVERSION=	2.3.2
 PORTREVISION=	2
 CATEGORIES=	security
-MASTER_SITES=	SF/ojnk/${PORTNAME}/${PORTVERSION}
+MASTER_SITES=	https://files.janikrabe.com/pub/${PORTNAME}/releases/${PORTVERSION}/
 
 MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	Ident server that supports user-defined ident strings
 
 LICENSE=	GPLv2
+
+USES=		bison tar:xz
 
 USE_RC_SUBR=	oidentd
 GNU_CONFIGURE=	yes
