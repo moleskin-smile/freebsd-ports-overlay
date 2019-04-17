@@ -1,6 +1,6 @@
---- doc/oidentd.8.orig	2019-04-16 22:36:56.748979000 +0200
-+++ doc/oidentd.8	2019-04-16 22:39:04.621986000 +0200
-@@ -65,7 +65,7 @@
+--- doc/oidentd.8.orig	2019-01-08 07:56:02 UTC
++++ doc/oidentd.8
+@@ -65,7 +65,7 @@ Use the specified alternate charset.
  .TP
  .B "\-C or \-\-config=<config file>"
  Use the specified file as the configuration file. The default location of the
@@ -9,7 +9,7 @@
  
  .TP
  .B "\-d or \-\-debug"
-@@ -85,7 +85,7 @@
+@@ -85,7 +85,7 @@ When IP masquerading support is enabled,
  masquerade through us to those machines on the specified port. If a port is not
  given, \fBoidentd\fP will use the default port for the ident service ("auth" or
  port 113). If the forwarded request fails, \fBoidentd\fP will fall back to
@@ -18,7 +18,7 @@
  the machine to which the connection is forwarded must also be running
  \fBoidentd\fP, and \fBoidentd\fP must be run with the \fB-P\fP switch
  specifying the host that is forwarding the connections. If the ident daemon on
-@@ -198,11 +198,11 @@
+@@ -198,11 +198,11 @@ Display options and exit.
  
  .SH FILES
  .TP

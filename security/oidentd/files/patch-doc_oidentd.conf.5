@@ -1,6 +1,6 @@
---- doc/oidentd.conf.5.orig	2019-04-16 22:41:40.568165000 +0200
-+++ doc/oidentd.conf.5	2019-04-16 22:41:51.651882000 +0200
-@@ -22,7 +22,7 @@
+--- doc/oidentd.conf.5.orig	2019-01-08 07:56:17 UTC
++++ doc/oidentd.conf.5
+@@ -22,7 +22,7 @@ connections owned by them.
  The \fB$HOME/.oidentd.conf\fP file allows a user to specify what ident response
  will be returned for specific connections.
  
@@ -9,7 +9,7 @@
  
  .TP
  .B USER DIRECTIVE
-@@ -148,7 +148,7 @@
+@@ -148,7 +148,7 @@ infinitely many times, however it doesn'
  manner.
  
  The range directive has the same syntax and semantics as the range directive in
@@ -18,7 +18,7 @@
  
  Valid capabilities are \fIreply\fP, \fIforward\fP, \fIrandom\fP, \fInumeric\fP,
  \fIrandom_numeric\fP, and \fIhide\fP. Descriptions can be found below.
-@@ -185,7 +185,7 @@
+@@ -185,7 +185,7 @@ be selected randomly.
  In a user's \fB$HOME/.oidentd.conf\fP file, up to 20 strings may be specified
  for a \fBreply\fP statement.
  
@@ -27,7 +27,7 @@
  strings that may be specified.
  
  The strings must be quoted strings (e.g. "string"). Strings may contain the
-@@ -260,7 +260,7 @@
+@@ -260,7 +260,7 @@ Reply to successful ident lookups with t
  Reply to successful with a randomly generated ident response of the form userN,
  where N is a random number between 0 and 100000.
  
